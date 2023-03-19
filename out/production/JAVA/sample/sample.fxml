@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="label1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="433.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutX="12.0" layoutY="14.0" prefHeight="496.0" prefWidth="410.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TODO List">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="77.0" prefWidth="422.0" spacing="10.0">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="121.0" prefWidth="178.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <TextField fx:id="lblName" prefHeight="26.0" prefWidth="257.0" promptText="Заголовок..." />
+                        <TextField fx:id="lblNote" prefHeight="26.0" prefWidth="257.0" promptText="Заметка..." />
+                        <TextField fx:id="lblDate" prefHeight="26.0" prefWidth="257.0" promptText="Дата напоминания..." />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="142.0" prefWidth="114.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Button fx:id="btnNewNote" alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="Добавить" />
+                        <Button fx:id="btnDeleteNote" alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" text="Удалить" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <ListView fx:id="taskList" editable="true" onMouseClicked="#handleMouseClick" prefHeight="286.0" prefWidth="392.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
